@@ -1,22 +1,39 @@
 <div align="center">
-  <img src="app-icon.png" alt="syncthingStatus icon" width="128" height="128">
+  <img src="github/screenshots/syncthingStatus.png" alt="syncthingStatus" width="400">
   <h1>syncthingStatus</h1>
   <p>A lightweight macOS menu bar app for monitoring <a href="https://syncthing.net">Syncthing</a> status in real-time.</p>
 
   ![macOS](https://img.shields.io/badge/macOS-15.5%2B-blue)
   ![Swift](https://img.shields.io/badge/Swift-5.0-orange)
   ![License](https://img.shields.io/badge/license-MIT-green)
-  [![Download](https://img.shields.io/github/v/release/Xpycode/syncthingStatus?label=Download&style=flat-square)](https://github.com/Xpycode/syncthingStatus/releases/latest)
+  ![Version](https://img.shields.io/badge/version-1.2-brightgreen)
+  [![Download](https://img.shields.io/badge/Download-v1.2-blue?style=flat-square)](https://github.com/Xpycode/syncthingStatus/releases/latest)
   [![Downloads](https://img.shields.io/github/downloads/Xpycode/syncthingStatus/total?style=flat-square)](https://github.com/Xpycode/syncthingStatus/releases)
 </div>
+
+## What's New in Version 1.2
+
+### Major Improvements
+- **Redesigned UI Layout** - Ultra-compact multi-column layouts for better space utilization
+- **Collapsible Sections** - Expandable device and folder details with disclosure groups
+- **Enhanced Activity Charts** - Collapsible transfer speed charts with improved visualization
+- **Demo Mode Scenarios** - Quick test scenarios including high-speed transfers
+- **Improved Layout Stability** - Fixed header shifting issues during updates
+- **Better Data Alignment** - Standardized spacing and alignment across all views
+
+### Bug Fixes & Performance
+- Fixed layout shifting in system statistics header
+- Resolved transfer speed display alignment issues
+- Improved monospaced digit formatting for stable number displays
+- Comprehensive code quality improvements and optimized view rendering
 
 ## Features
 
 - **Menu Bar Integration**: Unobtrusive status indicator that lives in your macOS menu bar
 - **Real-Time Monitoring**: Automatic updates every 10 seconds
 - **Visual Status Indicators**:
-  - ![Synced](screenshots/icon-synched.png) **Synced**: When synced to at least one device
-  - ![Disconnected](screenshots/icon-disconnected.png) **Disconnected**: When Syncthing is unreachable or needs attention
+  - ![Synced](github/screenshots/icon-synched.png) **Synced**: When synced to at least one device
+  - ![Disconnected](github/screenshots/icon-disconnected.png) **Disconnected**: When Syncthing is unreachable or needs attention
 - **Device Monitoring**: Track connection status, sync progress, and transfer rates for all remote devices
 - **Folder Status**: View sync state, file counts, and data sizes for each shared folder
 - **System Information**: Display device name, uptime, and version information
@@ -29,33 +46,43 @@
 
 ## Screenshots
 
-### Popover View
-Quick status check from the menu bar - shows device name, sync status, connected devices, and folder information.
+### Popover - Quick Status Check
+The main interface - quick access from your menu bar. The size can be adjusted via Settings in the General section using the "Popover Max Height" slider (controls how tall the popover can grow before showing scrollbars).
 
-![Popover View](screenshots/Popover.png)
+| Small | Medium | Large |
+|-------|--------|-------|
+| ![Small](github/screenshots/Popover-small.png) | ![Medium](github/screenshots/Popover-medium.png) | ![Large](github/screenshots/Popover-large.png) |
 
 ### Main Window
-Detailed overview with system statistics, device information, and folder status.
+Detailed overview with system statistics, expandable device and folder details.
 
-![Main Window - Synced](screenshots/MainWindow-synched.png)
+![Main Window - Overview](github/screenshots/MainWindow-1.png)
 
-![Main Window - Syncing](screenshots/MainWindow-synching.png)
+![Main Window - Activity Charts](github/screenshots/MainWindow-Activity.png)
 
-#### Detailed Views
-Expand devices and folders to see comprehensive information including connection details, transfer rates, and sync progress.
+### Detailed Views
+Expandable sections showing comprehensive device and folder information.
 
-![Main Window - Folder Details](screenshots/MainWindow-DetailFolder.png)
+![Devices Expanded](github/screenshots/MainWindow-DevicesExpanded.png)
 
-![Main Window - Device Details](screenshots/MainWindow-DetailRemoteDevice.png)
+![Services Expanded](github/screenshots/MainWindow-ServicesExpanded.png)
 
 ### Settings
-Configure connection, sync thresholds, and notifications.
+Comprehensive configuration options for customizing the app to your needs.
 
-![Settings - Connection](screenshots/SettingsWindow-1.png)
+**Connection Settings** - Configure how the app connects to Syncthing:
+![Settings - Connection](github/screenshots/Settings-1.png)
 
-![Settings - Thresholds](screenshots/SettingsWindow-2.png)
+**Sync Thresholds** - Customize when devices are considered "synced":
+![Settings - Thresholds](github/screenshots/Settings-2.png)
 
-![Settings - Notifications](screenshots/SettingsWindow-3.png)
+**General** - Launch at login settings and popover max height control (percentage of screen height):
+![Settings - Notifications](github/screenshots/Settings-3.png)
+
+### Demo Mode
+Test the app with simulated scenarios without affecting your actual Syncthing setup. Includes quick scenarios like "All Synced", "Syncing", "High-Speed Transfers", and more.
+
+![Demo Mode](github/screenshots/DemoMode-QuickScenarios.png)
 
 ## Requirements
 
@@ -107,6 +134,8 @@ To connect to a remote Syncthing instance:
 4. Enter the API key (found in Syncthing's web UI under Actions → Settings → API Key)
 
 ## Technical Details
+
+<img src="github/icons/app-icon.png" alt="App Icon" width="64" height="64" align="right">
 
 Built with:
 - **SwiftUI** for modern, declarative UI

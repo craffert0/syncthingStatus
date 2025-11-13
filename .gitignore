@@ -79,12 +79,19 @@ notifications.md
 Repository-Screenshots/
 AppVersions/
 
+# Organized folders (excluded from git)
+2_LLM-Docs/
+3_ScreenshotsCoding/
+4_AppIcons/
+7_EXPORT/
+8_forGitHub/
+
 # Screenshot files in root (keep only those in screenshots/ folder)
 /SHOTTR--*.png
 /LWScreenShot*.png
 
-# Old distribution files (keep only latest)
-syncthingStatus-v1.0.dmg
+# Old distribution files in root (deprecated - now in github/releases/)
+# Note: github/releases/ DMGs are tracked
 
 # fastlane
 #
